@@ -8,17 +8,15 @@ import { tokens } from "../../theme";
 
 const Invoices = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.colors);
+  const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "ID" },
-
     {
       field: "name",
-      headerName: "NAME",
+      headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
-
     {
       field: "phone",
       headerName: "Phone Number",
@@ -39,7 +37,6 @@ const Invoices = () => {
         </Typography>
       ),
     },
-
     {
       field: "date",
       headerName: "Date",
@@ -61,32 +58,25 @@ const Invoices = () => {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            border: colors.greenAccent[300],
+            color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[300],
+            backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[600],
+            backgroundColor: colors.primary[400],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
-            backgroundColor: colors.blueAccent[300],
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[900]} !important`,
+            backgroundColor: colors.blueAccent[700],
           },
           "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[800]} !important`,
+            color: `${colors.greenAccent[200]} !important`,
           },
         }}
       >
-        <DataGrid
-          checkboxSelection
-          rows={mockDataInvoices}
-          columns={columns}
-        />
+        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
       </Box>
     </Box>
   );

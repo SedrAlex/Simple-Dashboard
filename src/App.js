@@ -10,11 +10,12 @@ import Invoices from "./scenes/Invoices/Invoices";
 import Form from "./scenes/Form/Form";
 import Calendar from "./scenes/Calendar/Calendar";
 import FAQ from "./scenes/FAQ/FAQ";
-// import  Bar from "./scenes/global/Bar";
-// import Form from "./scenes/global/Form";
-// import Line from "./scenes/global/Line";
-// import Pie from "./scenes/global/Pie";
-// import Geography from "./scenes/global/Geography";
+import Bar from "./scenes/Bar/Bar";
+import Pie from "./scenes/Pie/Pie";
+import Line from "./scenes/Line/Line";
+import Geography from "./scenes/Geography/Geography";
+
+
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -32,11 +33,11 @@ function App() {
                   <Route path="/contacts" element={<Contacts />} />
                   <Route path="/invoices" element={<Invoices />} />
                   <Route path="/form" element={<Form />} />
-                  {/* <Route path="/bar" element={<Bar />} /> */}
-                  {/* <Route path="/pie" element={<Pie />} /> */}
-                  {/* <Route path="/line" element={<Line />} /> */}
+                  <Route path="/bar" element={<Bar />} />
+                  <Route path="/pie" element={<Pie />} />
+                  <Route path="/line" element={<Line />} />
                   <Route path="/faq" element={<FAQ />} />
-                  {/* <Route path="/geography" element={<Geography />} /> */}
+                  <Route path="/geography" element={<Geography />} />
                   <Route path="/calendar" element={<Calendar />} />
             
                 </Routes>
