@@ -10,7 +10,7 @@ import { tokens } from "../../theme";
 
 const Team = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.colors);
+  const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -85,15 +85,15 @@ const Team = () => {
             border:colors.greenAccent[300]
         },
         "& .MuiDataGrid-columnHeaders":{
-            backgroundColor:colors.blueAccent[300],
+            backgroundColor:colors.blueAccent[700],
             borderBottom:"none"
         },
         "& .MuiDataGrid-virtualScroller":{
-          backgroundColor:colors.primary[600],
+          backgroundColor:colors.primary[400],
         },
         "& .MuiDataGrid-footerContainer":{
           borderTop:"none",
-          backgroundColor:colors.blueAccent[300],
+          backgroundColor:colors.blueAccent[700],
         },
        }}
       >

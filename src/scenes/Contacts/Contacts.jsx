@@ -8,7 +8,7 @@ import { tokens } from "../../theme";
 
 const Contacts = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.colors);
+  const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "ID", flex:0.5},
     { field: "registrarId", headerName: "Registrar ID"},
@@ -73,18 +73,18 @@ const Contacts = () => {
             border:colors.greenAccent[300]
         },
         "& .MuiDataGrid-columnHeaders":{
-            backgroundColor:colors.blueAccent[300],
+            backgroundColor:colors.blueAccent[700],
             borderBottom:"none"
         },
         "& .MuiDataGrid-virtualScroller":{
-          backgroundColor:colors.primary[600],
+          backgroundColor:colors.primary[400],
         },
         "& .MuiDataGrid-footerContainer":{
           borderTop:"none",
-          backgroundColor:colors.blueAccent[300],
+          backgroundColor:colors.blueAccent[700],
         },
         "& .MuiDataGrid-toolbarContainer .MuiButton-text" :{
-             color:`${colors.grey[900]} !important`
+             color:`${colors.grey[200]} !important`
           },
        }}
       >
